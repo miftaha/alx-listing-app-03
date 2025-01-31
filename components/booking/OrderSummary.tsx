@@ -10,9 +10,9 @@ interface OrderSummaryProps {
 const OrderSummary: React.FC<{ bookingDetails: OrderSummaryProps }> = ({
   bookingDetails,
 }) => (
-  <div className="bg-white p-6 shadow-md rounded-lg flex flex-col">
+  <div className="bg-white p-6 shadow-md rounded-lg h-[818px]">
     <h2 className="text-xl font-semibold">Review Order Details</h2>
-    <div className="flex flex-col items-center mt-4">
+    <div className="flex flex-col gap-4  mt-4">
       <Image
         src="/assets/images/image2.jpg"
         width={539}
@@ -20,8 +20,10 @@ const OrderSummary: React.FC<{ bookingDetails: OrderSummaryProps }> = ({
         alt="Property"
         className="object-cover rounded-md mb-[15px]"
       />
-      <div className=" ">
-        <h3 className="text-lg font-semibold">{bookingDetails.propertyName}</h3>
+      <div className="">
+        <h3 className="text-2xl font-semibold text-[#161117]">
+          {bookingDetails.propertyName}
+        </h3>
         <p className="text-sm text-gray-500">4.76 (345 reviews)</p>
         <p className="text-sm text-gray-500">
           {bookingDetails.startDate} • {bookingDetails.totalNights} Nights
